@@ -50,8 +50,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Defining the parameters of the "click" function.
     function click(square) {
         if (square.classList.contains("bomb")) {
-            alert("Game Over!");
-        };
+            console.log("Game Over");
+        } else {
+            let total = square.getAttribute("data");
+            if (total !=0) {
+                square.classList.add("checked");
+            }
+        }
     }
 
 });
