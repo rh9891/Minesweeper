@@ -1,0 +1,13 @@
+/* Minesweeper grid is 10 x 10. Each square will be 40px for its height and width. */
+.grid {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: grey;
+}
+
+.grid div {
+    height: 40px;
+    width: 40px;
+}
