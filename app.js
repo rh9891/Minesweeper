@@ -55,7 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
             let total = square.getAttribute("data");
             if (total !=0) {
                 square.classList.add("checked");
+                square.innerHTML = total;
+                return;
             }
+            square.classList.add("checked");
         }
     }
 
