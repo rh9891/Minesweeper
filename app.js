@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let width = 10;
     let bombAmount = 20;
     let squares = [];
+    let isGameOver = false; 
 
     // Creates board for Minesweeper game.
     function createBoard() {
@@ -49,6 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Defining the parameters of the "click" function.
     function click(square) {
+        let currentID = square.id;
+        if (isGameOver) return;
+        if (square.classList.contains("checked") || square.classList.contains("flag")) return;
         if (square.classList.contains("bomb")) {
             console.log("Game Over");
         } else {
@@ -57,9 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 square.classList.add("checked");
                 square.innerHTML = total;
                 return;
-            }
-            square.classList.add("checked");
+            }; 
+            checkSquare(square, currentID)
         }
+        square.classList.add("checked");
     }
 
 });
