@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isGameOver) return;
         if (square.classList.contains("checked") || square.classList.contains("flag")) return;
         if (square.classList.contains("bomb")) {
-            console.log("Game Over");
+            gameOver(square);
         } else {
             let total = square.getAttribute("data");
             if (total !=0) {
@@ -114,6 +114,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 click(newSquare); 
             }
         }, 10)
-    }
+    };
 
+    // Function to notify the user that the game is over.
+    function gameOver(square) {
+        isGameOver = true;
+        alert("BOOM! Game over!");
+
+    // Function to show all the bomb locations given that the game is over.
+    squares.forEach(square => {
+        if (square.classList.contains("bomb")) {
+            square.innerHTML = "💣";
+        };
+    });
+    }
 });
