@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Constants.
     const grid = document.querySelector(".grid");
     let width = 10;
     let bombAmount = 20;
+    let flags = 0;
     let squares = [];
-    let isGameOver = false; 
+    let isGameOver = false;
 
     // Creates board for Minesweeper game.
     function createBoard() {
@@ -21,10 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
             grid.appendChild(square);
             squares.push(square);
 
-            // Clicking on board.
+            // Clicking on board normally.
             square.addEventListener("click", function(event) {
                 click(square);
             });
+
+            // Clicking with left click or pressing control and then click.
+            square.oncontextmenu = function(event) {
+                event.preventDefault();
+                addFlag(square);
+            };
         }
 
         // Displays numbers to indicate bombs for the neighboring eight squares.
@@ -47,6 +55,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     }
     createBoard();
+
+    // Function to add flag to the game board using the right click.
+    function addFlag(square) {
+        if (isGameOver) return;
+        if (!square.classList.contains("checked") && (flags < bombAmount)) {
+            if (!square.classList.contains("flag")) {
+                square.classList.add("flag");
+                square.innerHTML = "🚩"
+                flags++;
+            } else {
+                square.classList.remove("flag");
+                square.innerHTML = ""
+                flags--
+
+            }
+        }
+    }
 
     // Defining the parameters of the "click" function.
     function click(square) {
