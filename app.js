@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < squares.length; i++) {
             let total = 0;
             const isLeftEdge = (i % width === 0);
-            const isRightEdge = (i === width -1);
+            const isRightEdge = (i === width - 1);
 
             if (squares[i].classList.contains("valid")) {
                 if (i > 0 && !isLeftEdge && squares[i - 1].classList.contains("bomb")) total++;
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (i < 98 && !isRightEdge && squares[i + 1].classList.contains("bomb")) total++;
                 if (i < 90 && !isLeftEdge && squares[i - 1 + width].classList.contains("bomb")) total++;
                 if (i < 88 && !isRightEdge && squares[i + 1 + width].classList.contains("bomb")) total++;
-                if (i < 89 && squares[i +width].classList.contains("bomb")) total++;
+                if (i < 89 && squares[i + width].classList.contains("bomb")) total++;
                 squares[i].setAttribute("data", total);
             }
     }
@@ -153,13 +153,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Function to notify the user that the game is over.
     function gameOver(square) {
+        result.innerHTML = "BOOM! Game Over!"
         isGameOver = true;
-        alert("BOOM! Game over!");
 
     // Function to show all the bomb locations given that the game is over.
     squares.forEach(square => {
         if (square.classList.contains("bomb")) {
             square.innerHTML = "💣";
+            square.classList.remove("bomb");
+            square.classList.add("checked");
         };
     });
     }
@@ -172,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 matches++;
             }
             if (matches === bombAmount) {
-                console.log("Congratulations! You've won!");
+                result.innerHTML = "Congratulations! You've won!";
                 isGameOver = true;
             }
         }

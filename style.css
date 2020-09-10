@@ -18,7 +18,7 @@
     margin-bottom: 10px;
 }
 
-.grid div {
+div {
     height: 40px;
     width: 40px;
     font-size: 25px;
@@ -26,18 +26,30 @@
     font-family: "Space Mono", monospace;
 }
 
+.valid {
+    height: 40px;
+    width: 40px;
+    border: 5px solid;
+    border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+    box-sizing: border-box;
+}
+
+
 .checked {
     height: 40px;
     width: 40px;
-    background-color: #FFFFD8;
+    background-color: #cecab7;
     border: 2px solid;
-    border-color: #FFFFD8;
+    border-color: #cecab7;
     box-sizing: border-box;
 }
 
 .bomb {
     height: 40px;
     width: 40px;
+    border: 5px solid;
+    border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+    box-sizing: border-box;
 }
 
 .one {
@@ -45,7 +57,7 @@
   }
   
 .two {
-    color: #C7CEEA;
+    color: #FFFFD8;
 }
 
 .three {
@@ -53,5 +65,10 @@
 }   
 
 .four {
+    color: #FF9AA2;
+}
+
+#result {
+    margin-top: 5px;
     color: #FF9AA2;
 }
