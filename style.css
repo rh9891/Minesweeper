@@ -4,7 +4,7 @@
     width: 400px;
     display: flex;
     flex-wrap: wrap;
-    background-color: grey;
+    background-color: #CFCFC4;
 }
 
 .grid div {
@@ -13,9 +13,24 @@
 }
 
 .checked {
-    background-color: red;
+    background-color: #FFFFD8;
 }
 
 .bomb {
-    background-color: orange;
 }
+
+.one {
+    color: #B5EAD7;
+  }
+  
+  .two {
+    color: #C7CEEA;
+  }
+  
+  .three {
+    color: #FFDAC1;
+  }
+  
+  .four{
+    color: #FF9AA2;
+  }
