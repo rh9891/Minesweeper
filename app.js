@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Creates board for Minesweeper game.
     function createBoard() {
-        flagsLeft.innerHTML = bombAmount;
+        flagsLeft.innerHTML = "🚩:" + bombAmount;
         // Randomly places bombs in the grid. Gets the shuffled game array.
         const bombsArray = Array(bombAmount).fill("bomb");
         const emptyArray = Array(width * width - bombAmount).fill("valid");
@@ -66,13 +66,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 square.classList.add("flag");
                 square.innerHTML = "🚩"
                 flags++;
-                flagsLeft.innerHTML = bombAmount - flags;
+                flagsLeft.innerHTML = "🚩:" + (bombAmount - flags);
                 checkForWin();
             } else {
                 square.classList.remove("flag");
                 square.innerHTML = ""
                 flags--
-                flagsLeft.innerHTML = bombAmount - flags;
+                flagsLeft.innerHTML = "🚩:" + (bombAmount - flags);
 
 
             }
