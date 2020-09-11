@@ -69,7 +69,7 @@ To download the above video file of the application functionality, you may do so
 
 
 ## Links
-- [Deployed Application]()
+- [Deployed Application](https://rh9891.github.io/Minesweeper/)
 - [Github Repository](https://github.com/rh9891/Minesweeper)
 
 ## Built Using
