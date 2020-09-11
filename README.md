@@ -29,7 +29,7 @@ Minesweeper features dynamically updated HTML and CSS powered by Javascript, wit
 ~~~
 AS A user  
 I WANT to play a minesweeper game  
-SO THAT I can have fun while using my deduction skills.  
+SO THAT I can have fun while using my deductive reasoning skills.  
 ~~~
 
 ## Features of the Application
