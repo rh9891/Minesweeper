@@ -65,6 +65,9 @@ The following animation demonstrates the application functionality:
 
 ![Minesweeper Functionality Preview](assets/videos/minesweeperFunctionalityPreview.gif)
 
+To download the above video file of the application functionality, you may do so [here](https://github.com/rh9891/Minesweeper/blob/master/assets/videos/minesweeperFunctionalityPreview.mp4).
+
+
 ## Links
 - [Deployed Application]()
 - [Github Repository](https://github.com/rh9891/Minesweeper)
