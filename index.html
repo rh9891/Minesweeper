@@ -10,13 +10,17 @@
 
 <body>
     <header>
-        <h1 id="title">Minesweeper</h1>
+        <h2 id="title">Minesweeper</h2>
+        <div class="container">
+        <p id="directions">Directions: Click on all the cells of the board which do not contain a bomb. You lose if you set off a bomb cell. Every non-bomb cell you click will tell you the total number of bombs in the eight neighboring cells. If you are sure that a cell contains a bomb, you can right-click to put a flag on it as a reminder. Once you have flagged all the bombs on the board, you can open the remaining non-bomb cells to win the game.</p>
+        <p id="note">Note: To start a new game (and abandon the current one!), click on the reset button.</p>
+        </div>
         <p id="flagsLeft"></p>
     </header>
 
     <main>
         <div class="grid"></div>
-        <button id="reset">Reset</button>
+        <button class="btn" id="reset"><span>Reset</span></button>
         <p id="result"></p>
     </main>
 </body>

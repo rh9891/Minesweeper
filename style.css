@@ -9,6 +9,38 @@ body {
     background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
+.container {
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+#title {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    display: block;
+    position: relative;
+    background: linear-gradient(to bottom, #806ac6 0%,#806ac6 50%,#6f5094 51%,#AA92C7 100%);
+    background-size: 10px;
+    line-height: 1;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#directions, #note {
+    font-size: 15px;
+    color: #6f5094;
+}
+
+#flagsLeft {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    color: #6f5094;
+}
+
 /* Minesweeper grid is 10 x 10. Each square will be 40px for its height and width. */
 .grid {
     width: 100%;
@@ -17,8 +49,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    background-color: #CFCFC4;
-    border: 10px solid #CFCFC4;
+    margin-bottom: 30px;
+    background-color: #AA92C7;
+    border: 10px solid #AA92C7;
 }
 
 .grid div {
@@ -40,9 +73,9 @@ body {
 .checked {
     height: 40px;
     width: 40px;
-    background-color: #cecab7;
+    background-color: #C4B4D8;
     border: 2px solid;
-    border-color: #cecab7;
+    border-color: #C4B4D8;
     box-sizing: border-box;
     display: grid;
 }
@@ -62,23 +95,75 @@ body {
     display: flex;
 }
 
-.one {
+.one, .five {
     color: #B5EAD7;
   }
   
-.two {
+.two, .six {
     color: #FFFFD8;
 }
 
-.three {
+.three, .seven {
     color: #FFDAC1;
 }   
 
-.four {
+.four, .eight {
     color: #FF9AA2;
 }
 
 #result {
-    margin-top: 5px;
-    color: #FF9AA2;
+    display: block;
+    position: relative;
+    background: linear-gradient(to bottom, #806ac6 0%,#806ac6 50%,#6f5094 51%,#AA92C7 100%);
+    background-size: 10px;
+    line-height: 1;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#reset {
+    background-color: #c4b4d8;
+    font-family: "Space Mono", monospace;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #6f5094;
+}
+
+.btn {
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    font-size: 15px;
+    padding: 15px 40px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.btn span {
+    position: relative; 
+    z-index: 1;
+}
+  
+.btn:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: #94bbe9;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+  
+.btn:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
 }
