@@ -5,6 +5,8 @@ body {
     font-family: "Space Mono", monospace;
     font-size: 2rem;
     text-align: center;
+    background: rgb(238,174,202);
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
 /* Minesweeper grid is 10 x 10. Each square will be 40px for its height and width. */

@@ -179,4 +179,14 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     }
+
+    // Reset game.
+    function reset() {
+        document.location.href = "";
+    }
+
+    // When clicked, the reset button will reset the game.
+    document.querySelector("#reset").addEventListener("click", function () {
+        reset();
+      });
 });
