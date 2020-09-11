@@ -63,7 +63,7 @@ THEN I start a new game and abandon the current one.
 
 The following animation demonstrates the application functionality:
 
-![Minesweeper Functionality Preview](assets/images/minesweeperFunctionalityPreview.gif)
+![Minesweeper Functionality Preview](assets/videos/minesweeperFunctionalityPreview.gif)
 
 ## Links
 - [Deployed Application]()
